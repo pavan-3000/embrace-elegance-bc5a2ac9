@@ -1010,16 +1010,16 @@ function FinalCTA() {
             <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-3">
               <a
                 href="#"
-                className="inline-flex h-12 items-center gap-2 rounded-[10px] bg-brand px-6 text-[15px] font-semibold text-brand-text shadow-[0_1px_0_rgba(255,255,255,0.25)_inset,0_8px_24px_-8px_rgba(94,234,212,0.5)] hover:bg-brand-hover transition-all active:scale-[0.98]"
+                className="inline-flex h-12 items-center gap-2 rounded-[10px] bg-brand px-6 text-[15px] font-bold text-brand-text hover:bg-brand-hover transition-all active:scale-[0.98]"
                 onClick={() => {
                   if (typeof window !== "undefined" && (window as any).trackConversion) {
                     (window as any).trackConversion("primary_cta_click", { location: "final_cta" });
                   }
                 }}
               >
-                <Github className="w-4 h-4" />
+                <Github className="w-4 h-4" strokeWidth={2.5} />
                 Deploy with GitHub
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4" strokeWidth={2.5} />
               </a>
               <a
                 href="#"
