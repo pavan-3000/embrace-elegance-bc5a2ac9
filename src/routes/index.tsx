@@ -221,10 +221,14 @@ function Nav() {
 
 function Wordmark() {
   return (
-    <span className="flex items-center gap-2">
-      <span className="grid place-items-center w-7 h-7 rounded-lg bg-brand text-brand-text">
-        <Rocket className="w-4 h-4" strokeWidth={2.5} />
-      </span>
+    <span className="flex items-center gap-2.5">
+      <img
+        src={iconAsset.url}
+        alt="DevLaunch logo"
+        width={28}
+        height={28}
+        className="w-7 h-7 rounded-[8px] shadow-[0_2px_8px_-2px_rgba(94,234,212,0.4)]"
+      />
       <span className="text-[15px] font-semibold tracking-tight">DevLaunch</span>
     </span>
   );
