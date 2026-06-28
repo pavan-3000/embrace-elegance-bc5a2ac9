@@ -603,8 +603,8 @@ function BentoCard({
 
 function FeatureIcon({ icon: Icon }: { icon: React.ElementType }) {
   return (
-    <div className="inline-grid place-items-center w-10 h-10 rounded-[10px] bg-surface-2 border border-[color:var(--border-default)] text-brand">
-      <Icon className="w-[18px] h-[18px]" />
+    <div className="inline-grid place-items-center w-9 h-9 sm:w-10 sm:h-10 rounded-[10px] bg-surface-2 border border-[color:var(--border-default)] text-brand">
+      <Icon className="w-[16px] h-[16px] sm:w-[18px] sm:h-[18px]" />
     </div>
   );
 }
