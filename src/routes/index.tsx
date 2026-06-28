@@ -501,7 +501,7 @@ function Counter({
 /* ────────────────── FEATURES (BENTO) ────────────────── */
 function Features() {
   return (
-    <section id="features" className="py-24 sm:py-32 relative">
+    <section id="features" className="py-24 sm:py-32 relative cv-auto">
       <div className="container-page">
         <SectionHeader
           eyebrow="Platform"
