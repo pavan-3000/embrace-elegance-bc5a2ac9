@@ -858,7 +858,7 @@ function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.5, delay: i * 0.08, ease: [0.32, 0.72, 0, 1] }}
-              className="surface-card p-7 flex flex-col"
+              className="card-interactive surface-card p-7 flex flex-col"
             >
               <div className="flex items-center gap-1 text-warning">
                 {[...Array(5)].map((_, i) => (
