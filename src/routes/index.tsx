@@ -504,7 +504,7 @@ function Features() {
           sub="Everything you need to take code from commit to production — without a single line of YAML."
         />
 
-        <div className="mt-16 grid grid-cols-1 lg:grid-cols-12 gap-4 auto-rows-fr">
+        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-4 lg:auto-rows-fr">
           {/* Hero feature */}
           <BentoCard className="lg:col-span-8 lg:row-span-2 min-h-[420px]" accent>
             <div className="flex flex-col h-full">
