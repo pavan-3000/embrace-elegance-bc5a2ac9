@@ -163,10 +163,10 @@ function Nav() {
           </a>
           <a
             href="#cta"
-            className="inline-flex h-9 items-center gap-1.5 rounded-[10px] bg-brand px-4 text-sm font-semibold text-brand-text shadow-[0_1px_0_rgba(255,255,255,0.2)_inset] hover:bg-brand-hover transition-colors"
+            className="inline-flex h-9 items-center gap-1.5 rounded-[10px] bg-brand px-4 text-sm font-bold text-brand-text hover:bg-brand-hover transition-colors"
           >
             Start free
-            <ArrowRight className="w-3.5 h-3.5" />
+            <ArrowRight className="w-3.5 h-3.5" strokeWidth={2.5} />
           </a>
         </div>
 
