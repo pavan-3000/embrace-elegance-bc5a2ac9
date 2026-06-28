@@ -944,7 +944,7 @@ function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.5, delay: i * 0.08, ease: [0.32, 0.72, 0, 1] }}
-              className={`relative rounded-[20px] p-8 flex flex-col ${
+              className={`card-interactive relative rounded-[20px] p-8 flex flex-col ${
                 t.featured
                   ? "bg-surface-1 border border-brand shadow-[0_0_48px_-12px_rgba(94,234,212,0.4)]"
                   : "surface-card"
