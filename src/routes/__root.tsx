@@ -11,6 +11,8 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import iconAsset from "../assets/devlaunch-icon.png.asset.json";
+import ogAsset from "../assets/og-devlaunch.jpg.asset.json";
 
 function NotFoundComponent() {
   return (
