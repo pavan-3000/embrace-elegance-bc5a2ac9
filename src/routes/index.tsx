@@ -202,9 +202,9 @@ function Nav() {
             <a
               href="#cta"
               onClick={() => setOpen(false)}
-              className="mt-4 inline-flex h-12 items-center justify-center gap-2 rounded-[10px] bg-brand text-base font-semibold text-brand-text"
+              className="mt-4 inline-flex h-12 items-center justify-center gap-2 rounded-[10px] bg-brand text-base font-bold text-brand-text"
             >
-              Start free <ArrowRight className="w-4 h-4" />
+              Start free <ArrowRight className="w-4 h-4" strokeWidth={2.5} />
             </a>
             <a
               href="#"
