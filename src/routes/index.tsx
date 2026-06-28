@@ -11,6 +11,8 @@ import {
   Container,
   Github,
   GitBranch,
+  Mail,
+  MessageCircle,
   Menu,
   Play,
   Rocket,
