@@ -532,32 +532,32 @@ function Features() {
 
           <BentoCard className="lg:col-span-4">
             <FeatureIcon icon={Zap} />
-            <h3 className="mt-5 text-[17px] font-semibold text-text-1">CI/CD in 60 seconds</h3>
-            <p className="mt-2 text-[14px] text-text-2 leading-relaxed">
+            <h3 className="mt-4 sm:mt-5 text-[15px] sm:text-[16px] lg:text-[17px] font-semibold text-text-1 leading-snug tracking-[-0.01em]">CI/CD in 60 seconds</h3>
+            <p className="mt-1.5 sm:mt-2 text-[13px] sm:text-[14px] text-text-2 leading-relaxed">
               GitHub Actions or Jenkins, fully wired. No Jenkinsfile, no IAM rabbit-hole.
             </p>
           </BentoCard>
 
           <BentoCard className="lg:col-span-4">
             <FeatureIcon icon={Cloud} />
-            <h3 className="mt-5 text-[17px] font-semibold text-text-1">Any cloud, any VPS</h3>
-            <p className="mt-2 text-[14px] text-text-2 leading-relaxed">
+            <h3 className="mt-4 sm:mt-5 text-[15px] sm:text-[16px] lg:text-[17px] font-semibold text-text-1 leading-snug tracking-[-0.01em]">Any cloud, any VPS</h3>
+            <p className="mt-1.5 sm:mt-2 text-[13px] sm:text-[14px] text-text-2 leading-relaxed">
               AWS, DigitalOcean, Hetzner, or your own box. We provision, you ship.
             </p>
           </BentoCard>
 
           <BentoCard className="lg:col-span-4">
             <FeatureIcon icon={Container} />
-            <h3 className="mt-5 text-[17px] font-semibold text-text-1">Docker, handled</h3>
-            <p className="mt-2 text-[14px] text-text-2 leading-relaxed">
+            <h3 className="mt-4 sm:mt-5 text-[15px] sm:text-[16px] lg:text-[17px] font-semibold text-text-1 leading-snug tracking-[-0.01em]">Docker, handled</h3>
+            <p className="mt-1.5 sm:mt-2 text-[13px] sm:text-[14px] text-text-2 leading-relaxed">
               Auto-generated Dockerfiles, multi-service Compose, registry push — invisible.
             </p>
           </BentoCard>
 
           <BentoCard className="lg:col-span-4">
             <FeatureIcon icon={GitBranch} />
-            <h3 className="mt-5 text-[17px] font-semibold text-text-1">Push to deploy</h3>
-            <p className="mt-2 text-[14px] text-text-2 leading-relaxed">
+            <h3 className="mt-4 sm:mt-5 text-[15px] sm:text-[16px] lg:text-[17px] font-semibold text-text-1 leading-snug tracking-[-0.01em]">Push to deploy</h3>
+            <p className="mt-1.5 sm:mt-2 text-[13px] sm:text-[14px] text-text-2 leading-relaxed">
               Every commit on <span className="font-mono text-text-1">main</span> ships to prod.
               Previews on every PR.
             </p>
@@ -565,8 +565,8 @@ function Features() {
 
           <BentoCard className="sm:col-span-2 lg:col-span-4">
             <FeatureIcon icon={Shield} />
-            <h3 className="mt-5 text-[17px] font-semibold text-text-1">Secrets &amp; SSL</h3>
-            <p className="mt-2 text-[14px] text-text-2 leading-relaxed">
+            <h3 className="mt-4 sm:mt-5 text-[15px] sm:text-[16px] lg:text-[17px] font-semibold text-text-1 leading-snug tracking-[-0.01em]">Secrets &amp; SSL</h3>
+            <p className="mt-1.5 sm:mt-2 text-[13px] sm:text-[14px] text-text-2 leading-relaxed">
               Encrypted env vars, auto-renewed TLS, custom domains in one click.
             </p>
           </BentoCard>
@@ -591,7 +591,7 @@ function BentoCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.5, ease: [0.32, 0.72, 0, 1] }}
-      className={`group relative rounded-[20px] border border-[color:var(--border-subtle)] bg-surface-1 p-6 sm:p-7 overflow-hidden transition-colors hover:border-[color:var(--border-default)] shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] ${className}`}
+      className={`group relative rounded-[20px] border border-[color:var(--border-subtle)] bg-surface-1 p-5 sm:p-6 lg:p-7 overflow-hidden transition-colors hover:border-[color:var(--border-default)] shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] ${className}`}
     >
       {accent && (
         <div className="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-brand opacity-[0.10] blur-2xl pointer-events-none group-hover:opacity-[0.16] transition-opacity duration-500" />
