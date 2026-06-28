@@ -970,14 +970,14 @@ function Pricing() {
               </ul>
               <a
                 href="#cta"
-                className={`mt-8 inline-flex h-11 items-center justify-center gap-2 rounded-[10px] text-[14px] font-semibold transition-colors ${
+                className={`mt-8 inline-flex h-11 items-center justify-center gap-2 rounded-[10px] text-[14px] font-bold transition-colors ${
                   t.featured
                     ? "bg-brand text-brand-text hover:bg-brand-hover"
                     : "bg-surface-2 text-text-1 hover:bg-surface-3 border border-[color:var(--border-default)]"
                 }`}
               >
                 {t.cta}
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4" strokeWidth={2.5} />
               </a>
             </motion.div>
           ))}
