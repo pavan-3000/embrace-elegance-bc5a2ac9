@@ -22,6 +22,7 @@ import {
   Zap,
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import iconAsset from "../assets/devlaunch-icon.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Landing,
