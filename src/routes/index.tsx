@@ -738,6 +738,8 @@ function CTA() {
               onSubmit={(e) => {
                 e.preventDefault();
                 setSent(true);
+                (window as unknown as { trackConversion?: (n: string, p?: Record<string, unknown>) => void })
+                  .trackConversion?.("contact_form_submit", { location: "landing_cta" });
               }}
               className="rounded-2xl border border-border bg-background/60 p-6 sm:p-7 space-y-4"
             >
