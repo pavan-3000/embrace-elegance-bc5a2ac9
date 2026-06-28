@@ -14,19 +14,19 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
+    <div className="flex min-h-dvh items-center justify-center bg-bg px-4">
       <div className="max-w-md text-center">
-        <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
-        <p className="mt-2 text-sm text-muted-foreground">
+        <p className="font-mono text-xs uppercase tracking-[0.18em] text-brand">404</p>
+        <h1 className="mt-3 text-4xl font-semibold text-text-1">Page not found</h1>
+        <p className="mt-3 text-sm text-text-2">
           The page you're looking for doesn't exist or has been moved.
         </p>
-        <div className="mt-6">
+        <div className="mt-8">
           <Link
             to="/"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="inline-flex h-10 items-center justify-center rounded-[10px] bg-brand px-5 text-sm font-semibold text-brand-text transition hover:bg-brand-hover"
           >
-            Go home
+            Back to home
           </Link>
         </div>
       </div>
@@ -42,13 +42,11 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   }, [error]);
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
+    <div className="flex min-h-dvh items-center justify-center bg-bg px-4">
       <div className="max-w-md text-center">
-        <h1 className="text-xl font-semibold tracking-tight text-foreground">
-          This page didn't load
-        </h1>
-        <p className="mt-2 text-sm text-muted-foreground">
-          Something went wrong on our end. You can try refreshing or head back home.
+        <h1 className="text-2xl font-semibold text-text-1">This page didn't load</h1>
+        <p className="mt-3 text-sm text-text-2">
+          Something went wrong on our end. Try again or head back home.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
@@ -56,13 +54,13 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
               router.invalidate();
               reset();
             }}
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="inline-flex h-10 items-center justify-center rounded-[10px] bg-brand px-5 text-sm font-semibold text-brand-text transition hover:bg-brand-hover"
           >
             Try again
           </button>
           <a
             href="/"
-            className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
+            className="inline-flex h-10 items-center justify-center rounded-[10px] border border-[color:var(--border-default)] bg-surface-2 px-5 text-sm font-semibold text-text-1 transition hover:bg-surface-3"
           >
             Go home
           </a>
@@ -77,24 +75,26 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "DevLauch — You Write the Code. We Deploy It." },
+      { name: "theme-color", content: "#0A0B0F" },
+      { title: "DevLaunch — Ship code, not YAML files." },
       {
         name: "description",
         content:
-          "DevLauch sets up CI/CD pipelines, containers, and cloud infrastructure so your GitHub repo goes live in 2 minutes — with AI that fixes failed builds automatically.",
+          "DevLaunch turns any GitHub repo into a live URL in 90 seconds. AI-powered CI/CD with self-healing builds, deploy to any cloud.",
       },
-      { name: "author", content: "DevLauch" },
-      { property: "og:title", content: "DevLauch — DevOps Made Simple" },
+      { name: "author", content: "DevLaunch" },
+      { property: "og:site_name", content: "DevLaunch" },
+      { property: "og:type", content: "website" },
+      { property: "og:title", content: "DevLaunch — Ship code, not YAML files." },
       {
         property: "og:description",
-        content: "GitHub → Live URL in 2 minutes. AI-powered CI/CD, auto-deploy, and self-healing builds.",
+        content: "GitHub → live URL in 90 seconds. AI fixes broken builds before you notice.",
       },
-      { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "DevLauch — DevOps Made Simple" },
+      { name: "twitter:title", content: "DevLaunch — Ship code, not YAML files." },
       {
         name: "twitter:description",
-        content: "GitHub → Live URL in 2 minutes. AI-powered CI/CD and auto-deploy.",
+        content: "GitHub → live URL in 90 seconds. AI-powered CI/CD with self-healing builds.",
       },
     ],
     links: [
@@ -103,7 +103,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap",
       },
     ],
     scripts: [
@@ -142,7 +142,6 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
     </QueryClientProvider>
   );
