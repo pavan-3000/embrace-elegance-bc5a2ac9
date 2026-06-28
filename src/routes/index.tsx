@@ -506,7 +506,7 @@ function Features() {
 
         <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-4 lg:auto-rows-fr">
           {/* Hero feature */}
-          <BentoCard className="lg:col-span-8 lg:row-span-2 min-h-[420px]" accent>
+          <BentoCard className="sm:col-span-2 lg:col-span-8 lg:row-span-2 lg:min-h-[420px]" accent>
             <div className="flex flex-col h-full">
               <div className="inline-flex items-center gap-2 self-start rounded-full bg-brand-soft px-2.5 py-1 text-[11px] font-medium text-brand">
                 <Bot className="w-3 h-3" /> AI Engineer
