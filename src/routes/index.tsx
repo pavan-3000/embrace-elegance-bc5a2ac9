@@ -288,11 +288,11 @@ function Hero() {
           >
             <a
               href="#cta"
-              className="group inline-flex h-11 items-center gap-2 rounded-[10px] bg-brand px-5 text-[15px] font-semibold text-brand-text shadow-[0_1px_0_rgba(255,255,255,0.25)_inset,0_8px_24px_-8px_rgba(94,234,212,0.5)] hover:bg-brand-hover transition-all active:scale-[0.98]"
+              className="group inline-flex h-11 items-center gap-2 rounded-[10px] bg-brand px-5 text-[15px] font-bold text-brand-text hover:bg-brand-hover transition-all active:scale-[0.98]"
             >
-              <Github className="w-4 h-4" />
+              <Github className="w-4 h-4" strokeWidth={2.5} />
               Deploy with GitHub
-              <ArrowRight className="w-4 h-4 -mr-0.5 group-hover:translate-x-0.5 transition-transform" />
+              <ArrowRight className="w-4 h-4 -mr-0.5 group-hover:translate-x-0.5 transition-transform" strokeWidth={2.5} />
             </a>
             <a
               href="#how"
