@@ -167,6 +167,40 @@
   contain-intrinsic-size: 1px 800px;
 }
 
+@utility card-interactive {
+  transition:
+    transform 220ms var(--ease-out),
+    border-color 220ms var(--ease-out),
+    box-shadow 220ms var(--ease-out),
+    background-color 220ms var(--ease-out);
+  will-change: transform;
+
+  &:hover {
+    transform: translateY(-2px);
+    border-color: var(--border-strong);
+    box-shadow: var(--shadow-2);
+  }
+  &:focus-within {
+    border-color: var(--brand);
+    box-shadow: 0 0 0 2px var(--brand-soft), var(--shadow-2);
+  }
+  &:active {
+    transform: translateY(0);
+    box-shadow: var(--shadow-1);
+    transition-duration: 80ms;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-interactive {
+    transition: border-color 120ms linear, box-shadow 120ms linear !important;
+  }
+  .card-interactive:hover,
+  .card-interactive:active {
+    transform: none !important;
+  }
+}
+
 @keyframes float-slow {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-6px); }

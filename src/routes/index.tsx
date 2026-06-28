@@ -591,7 +591,7 @@ function BentoCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.5, ease: [0.32, 0.72, 0, 1] }}
-      className={`group relative rounded-[20px] border border-[color:var(--border-subtle)] bg-surface-1 p-5 sm:p-6 lg:p-7 overflow-hidden transition-colors hover:border-[color:var(--border-default)] shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] ${className}`}
+      className={`card-interactive group relative rounded-[20px] border border-[color:var(--border-subtle)] bg-surface-1 p-5 sm:p-6 lg:p-7 overflow-hidden shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] ${className}`}
     >
       {accent && (
         <div className="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-brand opacity-[0.10] blur-2xl pointer-events-none group-hover:opacity-[0.16] transition-opacity duration-500" />
@@ -858,7 +858,7 @@ function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.5, delay: i * 0.08, ease: [0.32, 0.72, 0, 1] }}
-              className="surface-card p-7 flex flex-col"
+              className="card-interactive surface-card p-7 flex flex-col"
             >
               <div className="flex items-center gap-1 text-warning">
                 {[...Array(5)].map((_, i) => (
@@ -944,7 +944,7 @@ function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.5, delay: i * 0.08, ease: [0.32, 0.72, 0, 1] }}
-              className={`relative rounded-[20px] p-8 flex flex-col ${
+              className={`card-interactive relative rounded-[20px] p-8 flex flex-col ${
                 t.featured
                   ? "bg-surface-1 border border-brand shadow-[0_0_48px_-12px_rgba(94,234,212,0.4)]"
                   : "surface-card"
