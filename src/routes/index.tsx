@@ -748,10 +748,10 @@ function Demo() {
                 <button
                   type="submit"
                   disabled={deploying}
-                  className="inline-flex h-11 items-center justify-center gap-2 rounded-[10px] bg-brand px-5 text-[14px] font-semibold text-brand-text hover:bg-brand-hover transition-colors disabled:opacity-60 active:scale-[0.98]"
+                  className="inline-flex h-11 items-center justify-center gap-2 rounded-[10px] bg-brand px-5 text-[14px] font-bold text-brand-text hover:bg-brand-hover transition-colors disabled:opacity-60 active:scale-[0.98]"
                 >
                   {deploying ? "Deploying…" : "Deploy"}
-                  {!deploying && <ArrowRight className="w-4 h-4" />}
+                  {!deploying && <ArrowRight className="w-4 h-4" strokeWidth={2.5} />}
                 </button>
               </form>
 
