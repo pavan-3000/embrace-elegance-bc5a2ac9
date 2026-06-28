@@ -1049,21 +1049,18 @@ function Footer() {
   const cols = [
     {
       title: "Product",
-      links: ["Features", "Pricing", "Changelog", "Roadmap", "Status"],
-    },
-    {
-      title: "Resources",
-      links: ["Documentation", "API reference", "Guides", "Blog", "Community"],
+      links: ["Features", "Pricing", "Changelog"],
     },
     {
       title: "Company",
-      links: ["About", "Customers", "Careers", "Contact", "Press kit"],
+      links: ["About", "Contact"],
     },
     {
       title: "Legal",
-      links: ["Privacy", "Terms", "Security", "DPA", "Cookies"],
+      links: ["Privacy", "Terms"],
     },
   ];
+
 
   return (
     <footer className="border-t border-[color:var(--border-subtle)] bg-surface-1/30">
