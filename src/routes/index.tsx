@@ -662,7 +662,7 @@ function HowItWorks() {
     },
   ];
   return (
-    <section id="how" className="py-24 sm:py-32 border-t border-[color:var(--border-subtle)]">
+    <section id="how" className="py-24 sm:py-32 border-t border-[color:var(--border-subtle)] cv-auto">
       <div className="container-page">
         <SectionHeader
           eyebrow="How it works"
@@ -720,7 +720,7 @@ function Demo() {
   };
 
   return (
-    <section className="py-24 sm:py-32 relative overflow-hidden">
+    <section className="py-24 sm:py-32 relative overflow-hidden cv-auto">
       <div className="container-page">
         <div className="surface-card relative p-8 sm:p-12 lg:p-16 overflow-hidden">
           <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-brand opacity-[0.10] blur-2xl pointer-events-none" />
@@ -847,7 +847,7 @@ function Testimonials() {
     },
   ];
   return (
-    <section id="testimonials" className="py-24 sm:py-32 border-t border-[color:var(--border-subtle)]">
+    <section id="testimonials" className="py-24 sm:py-32 border-t border-[color:var(--border-subtle)] cv-auto">
       <div className="container-page">
         <SectionHeader eyebrow="Loved by builders" title="What teams are saying." />
         <div className="mt-16 grid md:grid-cols-3 gap-5">
@@ -929,7 +929,7 @@ function Pricing() {
     },
   ];
   return (
-    <section id="pricing" className="py-24 sm:py-32 border-t border-[color:var(--border-subtle)]">
+    <section id="pricing" className="py-24 sm:py-32 border-t border-[color:var(--border-subtle)] cv-auto">
       <div className="container-page">
         <SectionHeader
           eyebrow="Pricing"
@@ -995,7 +995,7 @@ function Pricing() {
 /* ────────────────── FINAL CTA ────────────────── */
 function FinalCTA() {
   return (
-    <section id="cta" className="py-24 sm:py-32 relative overflow-hidden">
+    <section id="cta" className="py-24 sm:py-32 relative overflow-hidden cv-auto">
       <div className="container-page">
         <div className="relative rounded-[28px] overflow-hidden border border-[color:var(--border-default)] bg-surface-1 p-10 sm:p-16 lg:p-20 text-center">
           <div className="absolute inset-0 bg-mesh opacity-100 pointer-events-none" />
