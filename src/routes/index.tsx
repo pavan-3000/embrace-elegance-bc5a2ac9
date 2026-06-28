@@ -525,7 +525,7 @@ function Features() {
             </div>
           </BentoCard>
 
-          <BentoCard className="lg:col-span-4 min-h-[200px]">
+          <BentoCard className="lg:col-span-4">
             <FeatureIcon icon={Zap} />
             <h3 className="mt-5 text-[17px] font-semibold text-text-1">CI/CD in 60 seconds</h3>
             <p className="mt-2 text-[14px] text-text-2 leading-relaxed">
@@ -533,7 +533,7 @@ function Features() {
             </p>
           </BentoCard>
 
-          <BentoCard className="lg:col-span-4 min-h-[200px]">
+          <BentoCard className="lg:col-span-4">
             <FeatureIcon icon={Cloud} />
             <h3 className="mt-5 text-[17px] font-semibold text-text-1">Any cloud, any VPS</h3>
             <p className="mt-2 text-[14px] text-text-2 leading-relaxed">
@@ -541,7 +541,7 @@ function Features() {
             </p>
           </BentoCard>
 
-          <BentoCard className="lg:col-span-4 min-h-[200px]">
+          <BentoCard className="lg:col-span-4">
             <FeatureIcon icon={Container} />
             <h3 className="mt-5 text-[17px] font-semibold text-text-1">Docker, handled</h3>
             <p className="mt-2 text-[14px] text-text-2 leading-relaxed">
@@ -549,7 +549,7 @@ function Features() {
             </p>
           </BentoCard>
 
-          <BentoCard className="lg:col-span-4 min-h-[200px]">
+          <BentoCard className="lg:col-span-4">
             <FeatureIcon icon={GitBranch} />
             <h3 className="mt-5 text-[17px] font-semibold text-text-1">Push to deploy</h3>
             <p className="mt-2 text-[14px] text-text-2 leading-relaxed">
@@ -558,7 +558,7 @@ function Features() {
             </p>
           </BentoCard>
 
-          <BentoCard className="lg:col-span-4 min-h-[200px]">
+          <BentoCard className="lg:col-span-4">
             <FeatureIcon icon={Shield} />
             <h3 className="mt-5 text-[17px] font-semibold text-text-1">Secrets &amp; SSL</h3>
             <p className="mt-2 text-[14px] text-text-2 leading-relaxed">
