@@ -591,7 +591,7 @@ function BentoCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.5, ease: [0.32, 0.72, 0, 1] }}
-      className={`group relative rounded-[20px] border border-[color:var(--border-subtle)] bg-surface-1 p-5 sm:p-6 lg:p-7 overflow-hidden transition-colors hover:border-[color:var(--border-default)] shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] ${className}`}
+      className={`card-interactive group relative rounded-[20px] border border-[color:var(--border-subtle)] bg-surface-1 p-5 sm:p-6 lg:p-7 overflow-hidden shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] ${className}`}
     >
       {accent && (
         <div className="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-brand opacity-[0.10] blur-2xl pointer-events-none group-hover:opacity-[0.16] transition-opacity duration-500" />
