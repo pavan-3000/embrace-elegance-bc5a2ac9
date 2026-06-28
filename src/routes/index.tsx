@@ -29,7 +29,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "DevLaunch — Ship code, not YAML files. Deploy in 90 seconds.",
+        title: "DevLaunch — Ship code, not YAML files. Deploy in 90s.",
       },
       {
         name: "description",
