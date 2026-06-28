@@ -69,11 +69,14 @@
   --border-strong: rgba(255, 255, 255, 0.16);
   --border-brand: rgba(94, 234, 212, 0.35);
 
-  --brand: #5EEAD4;
-  --brand-hover: #6FF5DF;
-  --brand-text: #0A0B0F;
+  /* Buttons: deeper teal for higher contrast with dark text (no glare/blur). */
+  --brand: #14B8A6;
+  --brand-hover: #0FA396;
+  --brand-text: #04140F;
   --brand-soft: rgba(94, 234, 212, 0.10);
-  --brand-glow: rgba(94, 234, 212, 0.25);
+  --brand-glow: rgba(20, 184, 166, 0.30);
+  /* Keep the bright mint for accents (dots, highlights, glows, marquees). */
+  --brand-accent: #5EEAD4;
 
   --success: #4ADE80;
   --warning: #FBBF24;
