@@ -93,6 +93,7 @@ function Landing() {
         <Demo />
         <Testimonials />
         <Pricing />
+        <Contact />
         <FinalCTA />
       </main>
       <Footer />
