@@ -563,7 +563,7 @@ function Features() {
             </p>
           </BentoCard>
 
-          <BentoCard className="lg:col-span-4">
+          <BentoCard className="sm:col-span-2 lg:col-span-4">
             <FeatureIcon icon={Shield} />
             <h3 className="mt-5 text-[17px] font-semibold text-text-1">Secrets &amp; SSL</h3>
             <p className="mt-2 text-[14px] text-text-2 leading-relaxed">
