@@ -594,7 +594,7 @@ function BentoCard({
       className={`group relative rounded-[20px] border border-[color:var(--border-subtle)] bg-surface-1 p-6 sm:p-7 overflow-hidden transition-colors hover:border-[color:var(--border-default)] shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] ${className}`}
     >
       {accent && (
-        <div className="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-brand opacity-[0.08] blur-3xl pointer-events-none group-hover:opacity-[0.14] transition-opacity duration-500" />
+        <div className="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-brand opacity-[0.10] blur-2xl pointer-events-none group-hover:opacity-[0.16] transition-opacity duration-500" />
       )}
       <div className="relative h-full">{children}</div>
     </motion.div>
@@ -723,7 +723,7 @@ function Demo() {
     <section className="py-24 sm:py-32 relative overflow-hidden">
       <div className="container-page">
         <div className="surface-card relative p-8 sm:p-12 lg:p-16 overflow-hidden">
-          <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-brand opacity-[0.08] blur-3xl pointer-events-none" />
+          <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-brand opacity-[0.10] blur-2xl pointer-events-none" />
           <div className="relative grid lg:grid-cols-2 gap-10 items-center">
             <div>
               <span className="font-mono text-[12px] uppercase tracking-[0.14em] text-brand">
