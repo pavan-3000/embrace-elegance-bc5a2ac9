@@ -23,6 +23,72 @@ import { useState } from "react";
 
 export const Route = createFileRoute("/")({
   component: Landing,
+  head: () => ({
+    meta: [
+      {
+        title:
+          "DevLauch — Deploy your GitHub repo in 2 minutes | AI DevOps & CI/CD",
+      },
+      {
+        name: "description",
+        content:
+          "DevLauch automates CI/CD, Docker, and cloud deploys for students and teams. Push to GitHub and get a live URL in under 2 minutes — with AI that fixes failed builds.",
+      },
+      {
+        name: "keywords",
+        content:
+          "DevOps automation, CI/CD pipeline, auto deploy, GitHub deploy, Docker deploy, Jenkins setup, AI build fix, AWS deployment, deploy to VPS, student deployment",
+      },
+      { property: "og:title", content: "DevLauch — You Write the Code. We Deploy It." },
+      {
+        property: "og:description",
+        content:
+          "GitHub → live URL in 2 minutes. AI-powered CI/CD, auto-deploy to any VPS, and self-healing builds.",
+      },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/" },
+      { property: "og:site_name", content: "DevLauch" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "DevLauch — You Write the Code. We Deploy It." },
+      {
+        name: "twitter:description",
+        content: "GitHub → live URL in 2 minutes. AI-powered CI/CD and auto-deploy.",
+      },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "DevLauch",
+          url: "https://devlauch.com",
+          description:
+            "DevOps automation platform: CI/CD pipelines, Docker, and cloud deploys with AI self-healing builds.",
+          contactPoint: {
+            "@type": "ContactPoint",
+            email: "support@devlauch.com",
+            telephone: "+91-95356-48896",
+            contactType: "customer support",
+          },
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          name: "DevLauch",
+          applicationCategory: "DeveloperApplication",
+          operatingSystem: "Web",
+          offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+          description:
+            "AI-powered DevOps automation that deploys any GitHub repo to a live URL in under two minutes.",
+        }),
+      },
+    ],
+  }),
 });
 
 function Landing() {
