@@ -82,7 +82,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "DevLaunch turns any GitHub repo into a live URL in 90 seconds. AI-powered CI/CD with self-healing builds, deploy to any cloud.",
+          "Turn any GitHub repo into a live URL in 90 seconds. AI-powered CI/CD with self-healing builds, deploy to any cloud.",
       },
       { name: "author", content: "DevLaunch" },
       { property: "og:site_name", content: "DevLaunch" },

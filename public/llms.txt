@@ -1,0 +1,13 @@
+# DevLaunch
+
+> AI-powered DevOps that turns any GitHub repo into a live URL in 90 seconds — self-healing CI/CD, deploy to any cloud.
+
+DevLaunch replaces YAML pipelines and platform teams with an AI build agent. Connect a GitHub repo and it provisions infrastructure, builds, deploys, and repairs broken builds automatically on AWS, DigitalOcean, Hetzner, or any VPS.
+
+## Pages
+
+- [Home](/): Product overview, live demo, pricing, and how DevLaunch works.
+
+## Optional
+
+- [Sitemap](/sitemap.xml): Machine-readable index of public pages.
