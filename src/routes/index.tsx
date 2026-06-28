@@ -228,6 +228,8 @@ function Wordmark() {
         alt="DevLaunch logo"
         width={28}
         height={28}
+        decoding="async"
+        fetchPriority="high"
         className="w-7 h-7 rounded-[8px] shadow-[0_2px_8px_-2px_rgba(94,234,212,0.4)]"
       />
       <span className="text-[15px] font-semibold tracking-tight">DevLaunch</span>
