@@ -11,6 +11,8 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import iconAsset from "../assets/devlaunch-icon.png.asset.json";
+import ogAsset from "../assets/og-devlaunch.jpg.asset.json";
 
 function NotFoundComponent() {
   return (
@@ -90,23 +92,41 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         property: "og:description",
         content: "GitHub → live URL in 90 seconds. AI fixes broken builds before you notice.",
       },
+      { property: "og:image", content: ogAsset.url },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "DevLaunch — Ship code, not YAML files." },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "DevLaunch — Ship code, not YAML files." },
       {
         name: "twitter:description",
         content: "GitHub → live URL in 90 seconds. AI-powered CI/CD with self-healing builds.",
       },
+      { name: "twitter:image", content: ogAsset.url },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
+      { rel: "icon", type: "image/png", href: iconAsset.url },
+      { rel: "apple-touch-icon", href: iconAsset.url },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap",
       },
     ],
     scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "DevLaunch",
+          url: "/",
+          logo: iconAsset.url,
+          sameAs: ["https://github.com/devlaunch"],
+        }),
+      },
       {
         async: true,
         src: "https://www.googletagmanager.com/gtag/js?id=G-THMDC3DDYY",
