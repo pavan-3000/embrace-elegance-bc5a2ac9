@@ -1045,6 +1045,164 @@ function FinalCTA() {
 }
 
 /* ────────────────── FOOTER ────────────────── */
+/* ────────────────── CONTACT ────────────────── */
+function Contact() {
+  const EMAIL = "hello@devlaunch.example";
+  const WHATSAPP = "1234567890"; // placeholder
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [sent, setSent] = useState(false);
+
+  function validate() {
+    const e: Record<string, string> = {};
+    if (!form.name.trim() || form.name.length > 100) e.name = "Enter your name (max 100).";
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email) || form.email.length > 255)
+      e.email = "Enter a valid email.";
+    if (!form.message.trim() || form.message.length > 1000)
+      e.message = "Message required (max 1000).";
+    setErrors(e);
+    return Object.keys(e).length === 0;
+  }
+
+  function onSubmit(ev: React.FormEvent) {
+    ev.preventDefault();
+    if (!validate()) return;
+    setSent(true);
+    setForm({ name: "", email: "", message: "" });
+    setTimeout(() => setSent(false), 5000);
+  }
+
+  return (
+    <section
+      id="contact"
+      aria-labelledby="contact-heading"
+      className="relative py-24 sm:py-32 border-t border-[color:var(--border-subtle)]"
+    >
+      <div className="container-page">
+        <div className="max-w-2xl">
+          <p className="text-[12px] font-semibold uppercase tracking-[0.14em] text-brand">
+            Get in touch
+          </p>
+          <h2
+            id="contact-heading"
+            className="mt-3 text-[clamp(2rem,4vw,3rem)] font-semibold tracking-[-0.02em] leading-[1.05]"
+          >
+            Tell us about your pipeline.
+          </h2>
+          <p className="mt-4 text-[16px] text-text-2 leading-relaxed">
+            Send a short note — we usually reply within a few hours. Prefer chat? Ping us on WhatsApp or email directly.
+          </p>
+        </div>
+
+        <div className="mt-12 grid gap-8 lg:grid-cols-[1.4fr_1fr]">
+          <form
+            onSubmit={onSubmit}
+            noValidate
+            className="rounded-2xl border border-[color:var(--border-subtle)] bg-surface-1/40 p-6 sm:p-8 space-y-5"
+          >
+            <div>
+              <label htmlFor="c-name" className="block text-[13px] font-medium text-text-2 mb-2">
+                Name
+              </label>
+              <input
+                id="c-name"
+                type="text"
+                value={form.name}
+                maxLength={100}
+                onChange={(e) => setForm({ ...form, name: e.target.value })}
+                className="w-full rounded-lg bg-bg/60 border border-[color:var(--border-subtle)] px-3.5 py-2.5 text-[14px] text-text-1 outline-none focus:border-brand focus:ring-2 focus:ring-brand/30 transition"
+                placeholder="Jane Doe"
+              />
+              {errors.name && <p className="mt-1.5 text-[12px] text-danger">{errors.name}</p>}
+            </div>
+            <div>
+              <label htmlFor="c-email" className="block text-[13px] font-medium text-text-2 mb-2">
+                Email
+              </label>
+              <input
+                id="c-email"
+                type="email"
+                value={form.email}
+                maxLength={255}
+                onChange={(e) => setForm({ ...form, email: e.target.value })}
+                className="w-full rounded-lg bg-bg/60 border border-[color:var(--border-subtle)] px-3.5 py-2.5 text-[14px] text-text-1 outline-none focus:border-brand focus:ring-2 focus:ring-brand/30 transition"
+                placeholder="you@company.com"
+              />
+              {errors.email && <p className="mt-1.5 text-[12px] text-danger">{errors.email}</p>}
+            </div>
+            <div>
+              <label htmlFor="c-msg" className="block text-[13px] font-medium text-text-2 mb-2">
+                Message
+              </label>
+              <textarea
+                id="c-msg"
+                rows={5}
+                value={form.message}
+                maxLength={1000}
+                onChange={(e) => setForm({ ...form, message: e.target.value })}
+                className="w-full rounded-lg bg-bg/60 border border-[color:var(--border-subtle)] px-3.5 py-2.5 text-[14px] text-text-1 outline-none focus:border-brand focus:ring-2 focus:ring-brand/30 transition resize-y"
+                placeholder="What are you trying to deploy?"
+              />
+              {errors.message && <p className="mt-1.5 text-[12px] text-danger">{errors.message}</p>}
+            </div>
+            <button
+              type="submit"
+              className="inline-flex items-center gap-2 rounded-lg bg-brand px-5 py-2.5 text-[14px] font-semibold text-brand-text hover:opacity-90 transition focus:outline-none focus:ring-2 focus:ring-brand/40"
+            >
+              Send message <ArrowRight className="w-4 h-4" />
+            </button>
+            {sent && (
+              <p role="status" className="text-[13px] text-success">
+                Thanks — we'll be in touch shortly.
+              </p>
+            )}
+          </form>
+
+          <div className="space-y-3">
+            <a
+              href={`mailto:${EMAIL}`}
+              className="group flex items-start gap-4 rounded-2xl border border-[color:var(--border-subtle)] bg-surface-1/40 p-5 hover:border-brand/50 transition"
+            >
+              <span className="rounded-lg bg-brand/10 p-2.5 text-brand">
+                <Mail className="w-5 h-5" />
+              </span>
+              <span>
+                <span className="block text-[14px] font-semibold text-text-1">Email us</span>
+                <span className="block text-[13px] text-text-2 mt-0.5">{EMAIL}</span>
+              </span>
+              <ArrowUpRight className="ml-auto w-4 h-4 text-text-3 group-hover:text-brand transition" />
+            </a>
+            <a
+              href={`https://wa.me/${WHATSAPP}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-start gap-4 rounded-2xl border border-[color:var(--border-subtle)] bg-surface-1/40 p-5 hover:border-brand/50 transition"
+            >
+              <span className="rounded-lg bg-brand/10 p-2.5 text-brand">
+                <MessageCircle className="w-5 h-5" />
+              </span>
+              <span>
+                <span className="block text-[14px] font-semibold text-text-1">WhatsApp</span>
+                <span className="block text-[13px] text-text-2 mt-0.5">+{WHATSAPP}</span>
+              </span>
+              <ArrowUpRight className="ml-auto w-4 h-4 text-text-3 group-hover:text-brand transition" />
+            </a>
+            <div className="rounded-2xl border border-[color:var(--border-subtle)] bg-surface-1/40 p-5">
+              <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-text-3">
+                Response time
+              </p>
+              <p className="mt-2 text-[14px] text-text-2">
+                Typically within a few hours, Mon–Fri.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ────────────────── FOOTER ────────────────── */
 function Footer() {
   const cols = [
     {
