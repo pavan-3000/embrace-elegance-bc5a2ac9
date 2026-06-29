@@ -589,9 +589,6 @@ function ClientProjects() {
           ))}
         </div>
 
-        <p className="mt-8 text-center text-[12px] text-text-3">
-          Demo URLs shown for illustration. Want yours featured? Ship it with DevLaunch.
-        </p>
       </div>
 
     </section>
