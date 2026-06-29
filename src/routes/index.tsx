@@ -497,11 +497,49 @@ function ClientProjects() {
     { value: 42, suffix: "", label: "Countries shipped to" },
     { value: 98, suffix: "%", label: "Client retention" },
   ];
-  const categories = [
-    { name: "SaaS platforms", count: 184 },
-    { name: "E-commerce", count: 96 },
-    { name: "Internal tools", count: 112 },
-    { name: "Mobile backends", count: 88 },
+  const projects = [
+    {
+      name: "Nimbus Analytics",
+      client: "SaaS · Series A",
+      stack: ["Next.js", "Postgres", "AWS"],
+      url: "https://nimbus-analytics.devlaunch.app",
+      deploys: 412,
+    },
+    {
+      name: "Atlas Commerce",
+      client: "E-commerce · DTC",
+      stack: ["Remix", "Stripe", "Hetzner"],
+      url: "https://atlas-commerce.devlaunch.app",
+      deploys: 287,
+    },
+    {
+      name: "Pulse Internal",
+      client: "Fintech · Internal tool",
+      stack: ["Vite", "Supabase", "Fly.io"],
+      url: "https://pulse-internal.devlaunch.app",
+      deploys: 198,
+    },
+    {
+      name: "Orbit API",
+      client: "Mobile backend",
+      stack: ["Fastify", "Redis", "DigitalOcean"],
+      url: "https://orbit-api.devlaunch.app",
+      deploys: 521,
+    },
+    {
+      name: "Lumen Docs",
+      client: "Dev tools · OSS",
+      stack: ["Astro", "Cloudflare", "R2"],
+      url: "https://lumen-docs.devlaunch.app",
+      deploys: 156,
+    },
+    {
+      name: "Forge CRM",
+      client: "B2B SaaS",
+      stack: ["TanStack", "Postgres", "AWS"],
+      url: "https://forge-crm.devlaunch.app",
+      deploys: 334,
+    },
   ];
   return (
     <section id="projects" className="py-20 sm:py-28 cv-auto">
@@ -509,7 +547,7 @@ function ClientProjects() {
         <SectionHeader
           eyebrow="Track record"
           title="Projects we've shipped for clients."
-          sub="Real teams, real deployments. Here's a snapshot of what DevLaunch has powered to production."
+          sub="Real teams, real deployments — every one of these is live in production on DevLaunch."
         />
 
         <div className="mt-12 sm:mt-16 grid grid-cols-2 lg:grid-cols-4 gap-px bg-[color:var(--border-subtle)] rounded-[20px] overflow-hidden border border-[color:var(--border-subtle)]">
@@ -518,25 +556,62 @@ function ClientProjects() {
               <Counter
                 to={m.value}
                 suffix={m.suffix}
-                className="font-display text-[36px] sm:text-[44px] leading-none font-semibold tracking-[-0.03em] text-brand"
+                className="font-display text-[34px] sm:text-[44px] leading-none font-semibold tracking-[-0.03em] text-brand"
               />
-              <p className="mt-3 text-[13px] text-text-2">{m.label}</p>
+              <p className="mt-3 text-[12px] sm:text-[13px] text-text-2">{m.label}</p>
             </div>
           ))}
         </div>
 
-        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {categories.map((c) => (
-            <div
-              key={c.name}
-              className="card-interactive surface-card p-5 flex items-center justify-between"
+        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {projects.map((p) => (
+            <a
+              key={p.name}
+              href={p.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="card-interactive surface-card p-5 sm:p-6 flex flex-col gap-4 group"
             >
-              <span className="text-sm font-medium text-text-1">{c.name}</span>
-              <span className="font-mono text-[13px] text-brand">{c.count}</span>
-            </div>
+              <div className="flex items-start justify-between gap-3">
+                <div className="min-w-0">
+                  <h3 className="text-[15px] font-semibold text-text-1 truncate">
+                    {p.name}
+                  </h3>
+                  <p className="mt-1 text-[12px] text-text-3">{p.client}</p>
+                </div>
+                <ArrowUpRight
+                  className="w-4 h-4 shrink-0 text-text-3 group-hover:text-brand transition-colors"
+                  strokeWidth={2.25}
+                />
+              </div>
+              <div className="flex flex-wrap gap-1.5">
+                {p.stack.map((s) => (
+                  <span
+                    key={s}
+                    className="rounded-md border border-[color:var(--border-subtle)] bg-surface-2 px-2 py-0.5 text-[11px] font-mono text-text-2"
+                  >
+                    {s}
+                  </span>
+                ))}
+              </div>
+              <div className="flex items-center justify-between pt-2 border-t border-[color:var(--border-subtle)]">
+                <span className="inline-flex items-center gap-1.5 text-[12px] text-text-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-success animate-pulse-dot" />
+                  Live
+                </span>
+                <span className="font-mono text-[11px] text-text-3">
+                  {p.deploys} deploys
+                </span>
+              </div>
+            </a>
           ))}
         </div>
+
+        <p className="mt-8 text-center text-[12px] text-text-3">
+          Demo URLs shown for illustration. Want yours featured? Ship it with DevLaunch.
+        </p>
       </div>
+
     </section>
   );
 }
