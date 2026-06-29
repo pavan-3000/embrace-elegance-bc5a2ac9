@@ -491,12 +491,6 @@ function Counter({
 
 /* ────────────────── CLIENT PROJECTS ────────────────── */
 function ClientProjects() {
-  const metrics = [
-    { value: 480, suffix: "+", label: "Projects delivered" },
-    { value: 120, suffix: "+", label: "Happy clients" },
-    { value: 42, suffix: "", label: "Countries shipped to" },
-    { value: 98, suffix: "%", label: "Client retention" },
-  ];
   const projects = [
     {
       name: "Nimbus Analytics",
