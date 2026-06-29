@@ -163,12 +163,6 @@ function Nav() {
             <CommandIcon className="w-3 h-3" />K
           </kbd>
           <a
-            href="#"
-            className="px-3 py-2 text-sm text-text-2 hover:text-text-1 transition-colors"
-          >
-            Sign in
-          </a>
-          <a
             href="#cta"
             className="inline-flex h-9 items-center gap-1.5 rounded-[10px] bg-brand px-4 text-sm font-bold text-brand-text hover:bg-brand-hover transition-colors"
           >
@@ -211,13 +205,6 @@ function Nav() {
               className="mt-4 inline-flex h-12 items-center justify-center gap-2 rounded-[10px] bg-brand text-base font-bold text-brand-text"
             >
               Start free <ArrowRight className="w-4 h-4" strokeWidth={2.5} />
-            </a>
-            <a
-              href="#"
-              onClick={() => setOpen(false)}
-              className="mt-2 inline-flex h-12 items-center justify-center rounded-[10px] border border-[color:var(--border-default)] bg-surface-1 text-base font-semibold text-text-1"
-            >
-              Sign in
             </a>
           </div>
         </motion.div>
