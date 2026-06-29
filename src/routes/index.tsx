@@ -491,12 +491,6 @@ function Counter({
 
 /* ────────────────── CLIENT PROJECTS ────────────────── */
 function ClientProjects() {
-  const metrics = [
-    { value: 480, suffix: "+", label: "Projects delivered" },
-    { value: 120, suffix: "+", label: "Happy clients" },
-    { value: 42, suffix: "", label: "Countries shipped to" },
-    { value: 98, suffix: "%", label: "Client retention" },
-  ];
   const projects = [
     {
       name: "Nimbus Analytics",
@@ -550,18 +544,6 @@ function ClientProjects() {
           sub="Real teams, real deployments — every one of these is live in production on DevLaunch."
         />
 
-        <div className="mt-12 sm:mt-16 grid grid-cols-2 lg:grid-cols-4 gap-px bg-[color:var(--border-subtle)] rounded-[20px] overflow-hidden border border-[color:var(--border-subtle)]">
-          {metrics.map((m, i) => (
-            <div key={i} className="bg-bg p-6 sm:p-8 text-center sm:text-left">
-              <Counter
-                to={m.value}
-                suffix={m.suffix}
-                className="font-display text-[34px] sm:text-[44px] leading-none font-semibold tracking-[-0.03em] text-brand"
-              />
-              <p className="mt-3 text-[12px] sm:text-[13px] text-text-2">{m.label}</p>
-            </div>
-          ))}
-        </div>
 
         <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {projects.map((p) => (
@@ -607,9 +589,6 @@ function ClientProjects() {
           ))}
         </div>
 
-        <p className="mt-8 text-center text-[12px] text-text-3">
-          Demo URLs shown for illustration. Want yours featured? Ship it with DevLaunch.
-        </p>
       </div>
 
     </section>
