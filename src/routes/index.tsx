@@ -92,6 +92,7 @@ function Landing() {
         <HowItWorks />
         <Demo />
         <Testimonials />
+        <ClientProjects />
         <Pricing />
         <Contact />
         <FinalCTA />
@@ -488,7 +489,59 @@ function Counter({
   );
 }
 
-/* ────────────────── FEATURES (BENTO) ────────────────── */
+/* ────────────────── CLIENT PROJECTS ────────────────── */
+function ClientProjects() {
+  const metrics = [
+    { value: 480, suffix: "+", label: "Projects delivered" },
+    { value: 120, suffix: "+", label: "Happy clients" },
+    { value: 42, suffix: "", label: "Countries shipped to" },
+    { value: 98, suffix: "%", label: "Client retention" },
+  ];
+  const categories = [
+    { name: "SaaS platforms", count: 184 },
+    { name: "E-commerce", count: 96 },
+    { name: "Internal tools", count: 112 },
+    { name: "Mobile backends", count: 88 },
+  ];
+  return (
+    <section id="projects" className="py-20 sm:py-28 cv-auto">
+      <div className="container-page">
+        <SectionHeader
+          eyebrow="Track record"
+          title="Projects we've shipped for clients."
+          sub="Real teams, real deployments. Here's a snapshot of what DevLaunch has powered to production."
+        />
+
+        <div className="mt-12 sm:mt-16 grid grid-cols-2 lg:grid-cols-4 gap-px bg-[color:var(--border-subtle)] rounded-[20px] overflow-hidden border border-[color:var(--border-subtle)]">
+          {metrics.map((m, i) => (
+            <div key={i} className="bg-bg p-6 sm:p-8 text-center sm:text-left">
+              <Counter
+                to={m.value}
+                suffix={m.suffix}
+                className="font-display text-[36px] sm:text-[44px] leading-none font-semibold tracking-[-0.03em] text-brand"
+              />
+              <p className="mt-3 text-[13px] text-text-2">{m.label}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {categories.map((c) => (
+            <div
+              key={c.name}
+              className="card-interactive surface-card p-5 flex items-center justify-between"
+            >
+              <span className="text-sm font-medium text-text-1">{c.name}</span>
+              <span className="font-mono text-[13px] text-brand">{c.count}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
 function Features() {
   return (
     <section id="features" className="py-24 sm:py-32 relative cv-auto">
