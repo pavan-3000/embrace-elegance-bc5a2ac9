@@ -1,8 +1,9 @@
-FROM node:16-alpine
+FROM node:22-alpine
 
 WORKDIR /app
 
-COPY package.json package-lock.json ./
+COPY package.json ./
+COPY package-lock.json ./
 COPY vite.config.ts ./
 COPY src/ src/
 COPY public/ public/
