@@ -1,11 +1,14 @@
-FROM node:18-alpine
+FROM node:16-alpine
 
 WORKDIR /app
 
-COPY package.json bun.lock bunfig.toml ./
+COPY package.json package-lock.json ./
+COPY vite.config.ts ./
 COPY src/ src/
 COPY public/ public/
-COPY vite.config.ts ./
+COPY tsconfig.json ./
+COPY bun.lock ./
+COPY bunfig.toml ./
 
 RUN npm install && npm run build
 
